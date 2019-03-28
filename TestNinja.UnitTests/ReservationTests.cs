@@ -21,7 +21,7 @@ namespace TestNinja.UnitTests
         }
 
         [TestMethod]
-        public void CanBeCancelledBy_MadeByUser_ReturnTrue()
+        public void CanBeCancelledBy_SameUserCancellingTheReservation_ReturnTrue()
         { //3A
             //Arrange
             Reservation reservation = new Reservation();
@@ -30,6 +30,18 @@ namespace TestNinja.UnitTests
             var Result = reservation.CanBeCancelledBy(reservation.MadeBy);
             //Assert
             Assert.IsTrue(Result);
+        }
+
+
+        [TestMethod]
+        public void CanBeCancelledBy_AnotherUserCancellingReservation_ReturnFalse()
+        { //3A
+            //Arrange
+            Reservation reservation = new Reservation();
+            //Act
+            var Result = reservation.CanBeCancelledBy(new User { IsAdmin = false });
+            //Assert
+            Assert.IsFalse(Result);
         }
 
 
