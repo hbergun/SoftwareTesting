@@ -9,12 +9,21 @@ namespace TestNinja.Fundamentals
         public User MadeBy { get; set; }
         public bool CanBeCancelledBy(User user)
         {
+            /*
             if (user.IsAdmin)
                 return true;
             if (MadeBy == user)
                 return true;
-
-            return false;
+                */
+            //Refactoring
+            //But Test Not Broken
+            /*
+            if (user.IsAdmin || MadeBy == user)
+                return true;
+            */
+            //Refactoring 2 
+            return (user.IsAdmin || MadeBy == user);
+            //return false;
         }
     }
 }
