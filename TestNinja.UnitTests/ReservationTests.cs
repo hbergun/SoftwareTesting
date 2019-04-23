@@ -10,7 +10,7 @@ namespace TestNinja.UnitTests
     {
         //[TestMethod] //MSTest FW
         [Test] //NUnit
-        // FORMAT : public void CanBeCancelledBy_Scenario_ExpectedBehavior()
+        //// FORMAT : public void MethodName_Scenario_ExpectedBehavior()
         public void CanBeCancelledBy_UserIsAdmin_ReturnTrue()
         { //3A
             //Arrange
