@@ -12,7 +12,7 @@ namespace TestNinja
         }
         public int Max(int a, int b)
         {
-            return (a > b) ? a : b;
+            return (a > b) ? a : b; //Execution Path 2 Or 3 Unit Test equal or greater then 2 or 3
         }
         public IEnumerable<int> GetOddNumbers(int limit)
         {
