@@ -8,6 +8,7 @@ namespace TestNinja.UnitTests
     [TestFixture] //NUnit
     public class ReservationTests
     {
+       
         //[TestMethod] //MSTest FW
         [Test] //NUnit
         //// FORMAT : public void MethodName_Scenario_ExpectedBehavior()

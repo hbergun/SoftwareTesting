@@ -8,7 +8,17 @@ namespace TestNinja.UnitTests
     [TestFixture]
     public class MathTests
     {
-         [Test]
+        private Math _math;
+        //SetUp
+        //TearDown
+
+        [SetUp]
+        public void SetUp() //Before Each Test
+        {
+            _math = new Math();
+        }
+
+        [Test]
          public void Add_WhenCalled_ReturnTheSumOfArguments()
         {
             var math = new Math();
