@@ -4,7 +4,11 @@ using System.Text;
 
 namespace TestNinja.Fundamentals
 {
-    class HtmlFormatter
+    public class HtmlFormatter
     {
+        public string FormatAsBold(string content)
+        {
+            return $"<strong>{content}</strong>";
+        }
     }
 }
