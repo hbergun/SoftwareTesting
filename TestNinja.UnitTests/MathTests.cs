@@ -17,9 +17,9 @@ namespace TestNinja.UnitTests
         {
             _math = new Math();
         }
-
+        [Ignore("Because I Will Rewrite,Edit This Method Later")]
         [Test]
-         public void Add_WhenCalled_ReturnTheSumOfArguments()
+        public void Add_WhenCalled_ReturnTheSumOfArguments()
         {
             //var math = new Math();
             var result = _math.Add(1, 2);
@@ -47,6 +47,17 @@ namespace TestNinja.UnitTests
             //var math = new Math();
             var result = _math.Max(1, 1);
             Assert.That(result, Is.EqualTo(1));
+        }
+        //Instead OF This Three Test Method
+        //One Generic Type Method
+        [Test]
+        [TestCase(1, 2, 2)]
+        [TestCase(2, 1, 2)]
+        [TestCase(1, 1, 1)]
+        public void Max_WhenCalled_ReturnTheGreaterArgument(int a, int b, int expectedResult)
+        {
+            var result = _math.Max(a, b);
+            Assert.That(result, Is.EqualTo(expectedResult));
         }
     }
 }
