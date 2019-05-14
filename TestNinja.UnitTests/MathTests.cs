@@ -70,10 +70,10 @@ namespace TestNinja.UnitTests
             Assert.That(result, Does.Contain(1));//
             Assert.That(result, Does.Contain(2));// Probably
             Assert.That(result, Does.Contain(3));//
-            //Short
+            //Equal Above Three Assertion
             Assert.That(result, Is.EquivalentTo(new[] { 1, 3, 5 }));
-            Assert.That(result, Is.Ordered);
-            Assert.That(result, Is.Unique);
+            //Assert.That(result, Is.Ordered); //Ordered Value Ascending
+            //Assert.That(result, Is.Unique); //Unique Value
 
 
         }
