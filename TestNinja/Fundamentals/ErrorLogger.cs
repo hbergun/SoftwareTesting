@@ -12,7 +12,12 @@ namespace TestNinja.Fundamentals
                 throw new ArgumentNullException();
             LastError = error;
             //Write the Log to a Storage
-            ErrorLogged?.Invoke(this, Guid.NewGuid());
+            // ErrorLogged?.Invoke(this, Guid.NewGuid());
+            OnErrorLogged(Guid.NewGuid());
+        }
+        protected virtual void OnErrorLogged(Guid errorID)
+        {
+            ErrorLogged?.Invoke(this, errorID);
         }
     }
 }
