@@ -15,7 +15,7 @@ namespace TestNinja.Fundamentals
             // ErrorLogged?.Invoke(this, Guid.NewGuid());
             OnErrorLogged(Guid.NewGuid());
         }
-        protected virtual void OnErrorLogged(Guid errorID)
+        protected virtual void OnErrorLogged(Guid errorID) //Not Tested
         {
             ErrorLogged?.Invoke(this, errorID);
         }
