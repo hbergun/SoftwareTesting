@@ -103,5 +103,14 @@ namespace TestNinja.UnitTests
             //Assert
             Assert.That(stack.Count, Is.EqualTo(3));
         }
+
+
+       // [Test]   //Snippet Example
+       // public void Method_Scenario_ExpectedBehavior()
+       // {
+       //
+       //
+       //     //Assert.That(result, Is.EqualTo(_));
+       // }
     }
 }
